@@ -1,29 +1,277 @@
-<UI version="4.0" >
- <class>mainwindowClass</class>
- <widget class="QMainWindow" name="mainwindowClass" >
-  <property name="objectName" >
-   <string notr="true">mainwindowClass</string>
-  </property>
-  <property name="geometry" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>1086</width>
+    <height>667</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>mainwindow</string>
+  <property name="windowTitle">
+   <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1086</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuF">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuE">
+    <property name="title">
+     <string>编辑(E)</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+   </widget>
+   <widget class="QMenu" name="menuW">
+    <property name="title">
+     <string>窗口(W)</string>
+    </property>
+    <addaction name="actionClose"/>
+    <addaction name="actionCloseAll"/>
+    <addaction name="actionTile"/>
+    <addaction name="actionCascade"/>
+    <addaction name="actionNext"/>
+    <addaction name="actionPrevious"/>
+   </widget>
+   <widget class="QMenu" name="menuH">
+    <property name="title">
+     <string>帮助(H)</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <addaction name="menuF"/>
+   <addaction name="menuE"/>
+   <addaction name="menuW"/>
+   <addaction name="menuH"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSaveAs"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/New_file.png</normaloff>:/ICON/New_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建文件(&amp;N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Open_file.png</normaloff>:/ICON/Open_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件(&amp;O)...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Save_file.png</normaloff>:/ICON/Save_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Save_as_file.png</normaloff>:/ICON/Save_as_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为(&amp;A)...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Exit.png</normaloff>:/ICON/Exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Undo_file.png</normaloff>:/ICON/Undo_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销(&amp;U)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Redo_file.png</normaloff>:/ICON/Redo_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>恢复(&amp;R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Cut_file.png</normaloff>:/ICON/Cut_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切(&amp;T)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Copy_file.png</normaloff>:/ICON/Copy_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(&amp;C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Paste_file.png</normaloff>:/ICON/Paste_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴(&amp;P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>关闭(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionCloseAll">
+   <property name="text">
+    <string>关闭所有窗口(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionTile">
+   <property name="text">
+    <string>平铺(&amp;T)</string>
+   </property>
+  </action>
+  <action name="actionCascade">
+   <property name="text">
+    <string>层叠(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Next_file.png</normaloff>:/ICON/Next_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>下一个(&amp;X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Tab</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/Previous_file.png</normaloff>:/ICON/Previous_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>前一个(&amp;V)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Tab</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/About.png</normaloff>:/ICON/About.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="icon">
+    <iconset resource="mymdi.qrc">
+     <normaloff>:/ICON/About_Qt.png</normaloff>:/ICON/About_Qt.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于Qt(&amp;Q)</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
  <resources>
-   <include location="mainwindow.qrc"/>
+  <include location="mymdi.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

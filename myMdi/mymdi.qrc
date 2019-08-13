@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ICON/About.png</file>
+        <file>ICON/About_Qt.png</file>
+        <file>ICON/Copy_file.png</file>
+        <file>ICON/Cut_file.png</file>
+        <file>ICON/Exit.png</file>
+        <file>ICON/New_file.png</file>
+        <file>ICON/Next_file.png</file>
+        <file>ICON/Open_file.png</file>
+        <file>ICON/Paste_file.png</file>
+        <file>ICON/Previous_file.png</file>
+        <file>ICON/Redo_file.png</file>
+        <file>ICON/Save_as_file.png</file>
+        <file>ICON/Save_file.png</file>
+        <file>ICON/Undo_file.png</file>
+        <file>ICON/About_copy.png</file>
+        <file>ICON/TextEdit_128px_1130521_easyicon.net.ico</file>
+    </qresource>
+</RCC>
