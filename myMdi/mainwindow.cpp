@@ -193,6 +193,23 @@ QMdiSubWindow * MainWindow::findMdiChild(const QString & fileName)
 {
 	QString canonicalFilePath = QFileInfo(fileName).canonicalFilePath();
 	//利用foreach语句遍历子窗口列表，如果其文件路径和要查找的路径相同，则返回该窗口
+	//******************************foreach用法***********************************//
+	//例如：QStringList listTemp;
+	//		listTemp.append("aaa");
+	//		listTemp.append("bbb");
+	//		listTemp.append("ccc");
+	//		QString strTemp1;
+	//		QString strTemp2;
+	//		foreach(strTemp1, listTemp)
+	//		{
+	//			strTemp2 = strTemp1;
+	//		}
+	//以上代码中，listTemp会把自己的每个项，依次赋值给strTemp1。
+	//本例中，strTemp共有三项，foreach会循环三次，strTemp1在这三次循环中，
+	//依次被赋值“aaa”，“bbb”，“ccc”。
+	//总结：foreach用来遍历list，可以在遍历中基于 list 的相应项做相应操作。
+	//******************************foreach用法***********************************//
+
 	foreach(QMdiSubWindow * window, ui->mdiArea->subWindowList())
 	{
 		MdiChild *mdiChild = qobject_cast<MdiChild *>(window->widget());

@@ -15,7 +15,13 @@ MdiChild::MdiChild()
 void MdiChild::newFile()
 {
     //设置窗口编号，因为编号一直被保存，所以需要使用静态变量
-    static int sequenceNumber = 1;
+	//****************************************静态变量的定义*****************************************//
+	//静态变量（Static Variable）在计算机编程领域指在程序执行前系统就为之静态分配（也即在运行时中不再改变分配情况）存储空间的一类变量。
+	//与之相对应的是在运行时只暂时存在的自动变量（即局部变量）与以动态分配方式获取存储空间的一些对象，其中自动变量的存储空间在调用栈上分配与释放。
+	//1、语言无关的通用定义：与程序有着相同生命周期的变量；
+	//2、C族语言特有的定义：以static存储类声明的变量。
+	//****************************************静态变量的定义*****************************************//
+	static int sequenceNumber = 1;
 
     //新建文档没有被保存过
     isUntitled = true;
@@ -23,7 +29,7 @@ void MdiChild::newFile()
     //将当前文件命名为未命名文档加编号，编号先使用再加1
     curFile = QString::fromLocal8Bit("未命名文档%1.txt").arg(sequenceNumber++);
 
-    //设置窗口标题，使用【*】可以在文档被更改后在文件名称后显示“*”号
+    //设置窗口标题，使用[*]可以在文档被更改后在文件名称后显示“*”号
     setWindowTitle(curFile+"[*]"+QString::fromLocal8Bit("-多文档编辑器"));
 
     //文档更改时发射contentsChanged()信号，执行documentWasModified()槽
@@ -33,7 +39,7 @@ void MdiChild::newFile()
 void MdiChild::documentWasModified()
 {
     //根据文档的isModified()函数的返回值，判断编辑器内容是否被更改了
-    //如果被更改了，就要在设置了【*】号的地方显示“*”号，这里会在窗口标题中显示
+    //如果被更改了，就要在设置了[*]号的地方显示“*”号，这里会在窗口标题中显示
     setWindowModified(document()->isModified());
 }
 
